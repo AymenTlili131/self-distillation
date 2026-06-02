@@ -1,0 +1,100 @@
+{
+  "cross_modality": [
+    {
+      "modality": "CNN (CIFAR-10)",
+      "variant": "Baseline",
+      "test_acc": 73.35,
+      "gen_gap": 22.21,
+      "ece": 0.1219,
+      "loss_flatness": 9.0281,
+      "theo_gen_bound": 1.8306
+    },
+    {
+      "modality": "CNN (CIFAR-10)",
+      "variant": "Self-Distilled",
+      "test_acc": 73.65,
+      "gen_gap": 22.17,
+      "ece": 0.1449,
+      "loss_flatness": 10.5938,
+      "theo_gen_bound": 1.9976
+    },
+    {
+      "modality": "Transformer (Audio)",
+      "variant": "Baseline",
+      "test_acc": 100.0,
+      "gen_gap": 0.0,
+      "ece": 0.0,
+      "loss_flatness": 4.991,
+      "theo_gen_bound": 0.4991
+    },
+    {
+      "modality": "Transformer (Audio)",
+      "variant": "Self-Distilled",
+      "test_acc": 100.0,
+      "gen_gap": 0.0,
+      "ece": 0.0001,
+      "loss_flatness": 6.4032,
+      "theo_gen_bound": 0.6404
+    }
+  ],
+  "llm": [
+    {
+      "variant": "Base (pretrained)",
+      "task_acc": 5.0,
+      "retention": 100.0,
+      "trainable_params": 613315,
+      "hallucination_rate": 0.0
+    },
+    {
+      "variant": "Full-SFT",
+      "task_acc": 100.0,
+      "retention": 26.666666666666668,
+      "trainable_params": 613315,
+      "hallucination_rate": 73.33333333333333
+    },
+    {
+      "variant": "LoRA",
+      "task_acc": 97.5,
+      "retention": 78.33333333333333,
+      "trainable_params": 30720,
+      "hallucination_rate": 21.66666666666667
+    },
+    {
+      "variant": "SD-SFT",
+      "task_acc": 22.5,
+      "retention": 67.5,
+      "trainable_params": 613315,
+      "hallucination_rate": 32.5
+    }
+  ],
+  "bounds": {
+    "cnn_baseline": {
+      "empirical_risk": 0.927750039100647,
+      "avg_grad_norm": 8.375802029550385,
+      "loss_flatness": 9.028080394789326,
+      "multi_view_factor": 0.5773502691896258,
+      "theoretical_gen_bound": 1.8305580785795796
+    },
+    "cnn_sd": {
+      "empirical_risk": 0.9382210652033488,
+      "avg_grad_norm": 9.939335666996131,
+      "loss_flatness": 10.593809848965385,
+      "multi_view_factor": 0.5773502691896258,
+      "theoretical_gen_bound": 1.9976020500998874
+    },
+    "audio_baseline": {
+      "empirical_risk": 6.721833904940957e-06,
+      "avg_grad_norm": 3.359882334965564e-05,
+      "loss_flatness": 4.991035700538474,
+      "multi_view_factor": 0.5773502691896258,
+      "theoretical_gen_bound": 0.4991102918877523
+    },
+    "audio_sd": {
+      "empirical_risk": 8.646773830360662e-05,
+      "avg_grad_norm": 0.0005537366123189216,
+      "loss_flatness": 6.403227271911986,
+      "multi_view_factor": 0.5773502691896258,
+      "theoretical_gen_bound": 0.6404091949295022
+    }
+  }
+}

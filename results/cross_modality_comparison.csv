@@ -1,0 +1,5 @@
+modality,variant,test_acc,gen_gap,ece,loss_flatness,theo_gen_bound
+CNN (CIFAR-10),Baseline,73.35,22.21,0.1219,9.0281,1.8306
+CNN (CIFAR-10),Self-Distilled,73.65,22.17,0.1449,10.5938,1.9976
+Transformer (Audio),Baseline,100.0,0.0,0.0,4.991,0.4991
+Transformer (Audio),Self-Distilled,100.0,0.0,0.0001,6.4032,0.6404

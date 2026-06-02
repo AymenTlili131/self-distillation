@@ -1,0 +1,5 @@
+variant,task_acc,retention,trainable_params,hallucination_rate
+Base (pretrained),5.0,100.0,613315,0.0
+Full-SFT,100.0,26.666666666666668,613315,73.33333333333333
+LoRA,97.5,78.33333333333333,30720,21.66666666666667
+SD-SFT,22.5,67.5,613315,32.5
